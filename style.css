@@ -1,0 +1,225 @@
+/* --- PENGATURAN UMUM --- */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #040404;
+    overflow-x: hidden;
+}
+
+/* --- NAVIGASI (SEJAJAR & TENGAH) --- */
+nav {
+    background-color: #070707;
+    padding: 1.2rem 0; /* Memberikan tinggi yang proporsional */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(237, 233, 233, 0.1);
+}
+
+.nav-container {
+    max-width: 1100px; /* Lebar maksimal agar sejajar dengan konten bawah */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Menu tepat di tengah */
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* Membuat menu horizontal/sejajar */
+    margin: 0;
+    padding: 0;
+    gap: 35px; /* Jarak antar menu */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fbfbfb;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #047dff;
+}
+
+/* --- HERO SECTION (HOME) --- */
+.hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #070707;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    color: #080808;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #0580fa;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.description {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #666;
+    font-size: 1rem;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column; /* Tombol bertumpuk sesuai screenshot Anda */
+    gap: 15px;
+    width: 100%;
+    max-width: 400px; /* Lebar tombol agar tidak terlalu lebar */
+}
+
+.btn-primary, .btn-secondary {
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #070707;
+    color: rgb(240, 234, 234);
+}
+
+.btn-secondary {
+    border: 2px solid #ebedee;
+    color: #f6f9f9;
+}
+
+/* --- KONTEN UTAMA (GALLERY) --- */
+main {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #f5f3f3;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #070707;
+}
+
+.photo-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.photo-group img {
+    width: calc(50% - 5px); 
+    height: 180px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* --- FOOTER & SOCIALS --- */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #090909;
+    color: rgb(245, 245, 245);
+    margin-top: 50px;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+/* Pastikan bagian ini diatur ke warna putih */
+.social-links a {
+    color: #fdfbfb; /* Mengubah teks menjadi putih */
+    text-decoration: none; /* Menghapus garis bawah default */
+    margin: 0 15px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+/* Warna saat kursor diarahkan ke link */
+.social-links a:hover {
+    color: #3498db; /* Berubah menjadi biru muda saat di-hover */
+    text-shadow: 0 0 8px rgba(9, 140, 226, 0.5); /* Efek cahaya halus */
+}
+
+
+/* --- RESPONSIVE PENYESUAIAN --- */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 15px; /* Jarak menu lebih rapat di HP agar tetap sejajar */
+    }
+    
+    nav ul li a {
+        font-size: 0.75rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .photo-group img {
+        width: 100%;
+        height: 220px;
+    }
+   input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    box-sizing: border-box; /* Agar padding tidak merusak lebar */
+}
+
+button[type="submit"] {
+    background-color: #070707;
+    color: rgb(254, 254, 254);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+}
